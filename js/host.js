@@ -31,10 +31,7 @@
   const joinUrl = () => `${base}play.html?r=${D.room}${passNet}${passMqtt}`;
 
   let netInfo = { up: 0, total: 0, label: '' };
-  let net = makeNet();
-  function makeNet() {
-    return Net.host(D.room, onMsg, st => { netInfo = st; drawStatus(); });
-  }
+  let net = null; // 아래 함수들이 모두 준비된 뒤에 연결 시작
 
   // ---------- 계산 ----------
   const teamById = id => D.teams.find(t => t.id === id);
@@ -54,9 +51,9 @@
     if (phase === 'play') st.got = Object.keys(results);
     if (lastResult && (phase === 'result' || phase === 'select' || phase === 'final')) st.lastResult = lastResult;
     if (Object.keys(notice).length) st.notice = notice;
-    net.setState(st);
+    if (net) net.setState(st);
   }
-  setInterval(() => net.resend(), 4000);
+  setInterval(() => net && net.resend(), 4000);
 
   function say(cid, msg) {
     notice[cid] = msg; publish();
@@ -470,6 +467,7 @@
     }
   });
 
+  net = Net.host(D.room, onMsg, st => { netInfo = st; try { drawStatus(); } catch (e) { } });
   $('#fs').onclick = U.fullscreen;
   $('#qrbtn').onclick = openQR;
   lastResult = D.history[D.history.length - 1] || null;

@@ -1,0 +1,89 @@
+/* 이용 가이드 */
+body.guide { line-height: 1.6; }
+.gd-top { position: sticky; top: 0; z-index: 10; display: flex; justify-content: space-between; align-items: center; padding: 10px 4vw; background: rgba(255,255,255,.95); backdrop-filter: blur(6px); border-bottom: 3px solid var(--yellow-l); }
+.gd-top a.brandbar { text-decoration: none; color: inherit; }
+.gd-top .brandbar img { height: 36px; }
+.gd-top .btn { text-decoration: none; }
+
+.gd-hero { text-align: center; padding: 48px 18px 30px; background: linear-gradient(var(--yellow-xl), var(--bg)); }
+.gd-hero h1 { font-size: clamp(28px, 5vw, 44px); margin: 12px 0 8px; letter-spacing: -0.04em; }
+.gd-hero p { color: var(--ink-2); margin: 0 auto; max-width: 640px; font-size: 17px; }
+.gd-url { display: inline-flex; align-items: center; gap: 10px; margin-top: 18px; background: #fff; padding: 10px 20px; border-radius: 999px; box-shadow: var(--shadow); }
+.gd-url small { color: var(--ink-3); font-weight: 700; }
+.gd-url b { color: var(--pink); font-size: 18px; word-break: break-all; }
+.gd-nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 22px; }
+.gd-nav a { text-decoration: none; color: var(--ink); background: #fff; border: 2px solid var(--line); padding: 8px 16px; border-radius: 999px; font-weight: 800; font-size: 15px; }
+.gd-nav a:hover { border-color: var(--mint); }
+
+.gd-main { max-width: 1080px; margin: 0 auto; padding: 0 18px 40px; }
+.gd-sec { padding: 34px 0 10px; scroll-margin-top: 70px; }
+.gd-sec h2 { font-size: clamp(24px, 3.4vw, 32px); margin: 0 0 18px; display: flex; align-items: center; gap: 12px; letter-spacing: -0.03em; }
+.gd-sec h2 .num { width: 40px; height: 40px; border-radius: 50%; background: var(--pink); color: #fff; display: inline-flex; align-items: center; justify-content: center; font-size: 20px; flex: none; }
+.gd-sub { margin: 28px 0 10px; }
+.gd-lead { color: var(--ink-2); margin-top: -6px; }
+.gd-note { background: var(--mint-l); border-radius: 16px; padding: 14px 18px; margin-top: 16px; }
+.gd-tip { background: var(--yellow-xl); border-radius: 12px; padding: 10px 14px; font-size: 15px; }
+
+.gd-cards { display: grid; gap: 14px; }
+.gd-cards.three { grid-template-columns: repeat(3, 1fr); }
+.gd-cards.two { grid-template-columns: repeat(2, 1fr); margin-top: 18px; }
+.gd-cards .card { padding: 18px 20px; border-top: 6px solid var(--mint); }
+.gd-cards .card:nth-child(3n+2) { border-color: var(--yellow); }
+.gd-cards .card:nth-child(3n+3) { border-color: var(--pink); }
+.gd-cards .card b { font-size: 18px; }
+.gd-cards .card p { margin: 6px 0 0; color: var(--ink-2); font-size: 15px; }
+
+.gd-step { display: grid; grid-template-columns: 1fr 1.25fr; gap: 28px; align-items: center; padding: 20px 0; border-bottom: 1px dashed var(--line); }
+.gd-step:last-of-type { border-bottom: 0; }
+.gd-step h3 { margin: 0 0 8px; font-size: 21px; }
+.gd-step p, .gd-step li { font-size: 16px; }
+.gd-step p { margin: 0 0 10px; }
+.gd-step ul, .gd-step ol { padding-left: 1.2em; margin: 0; }
+.gd-step li { margin-bottom: 6px; }
+.gd-step figure, .gd-phones figure { margin: 0; }
+.gd-step figure img { width: 100%; border-radius: 16px; box-shadow: 0 8px 26px rgba(80,60,20,.14); border: 1px solid var(--line); display: block; }
+
+kbd { display: inline-block; font-family: inherit; font-size: .85em; font-weight: 800; padding: 1px 8px; border-radius: 7px; background: #fff; border: 1px solid #ddd; border-bottom-width: 3px; margin: 0 2px; }
+code { background: var(--yellow-xl); padding: 1px 6px; border-radius: 6px; font-family: inherit; font-weight: 700; }
+
+.gd-keys { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 10px; }
+.gd-keys div { background: #fff; border-radius: 14px; padding: 12px 14px; box-shadow: var(--shadow); display: flex; align-items: center; gap: 4px; flex-wrap: wrap; }
+.gd-keys span { margin-left: 6px; color: var(--ink-2); font-weight: 700; font-size: 15px; }
+
+.gd-phones { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; }
+.gd-phones img { width: 100%; border-radius: 18px; border: 6px solid #fff; box-shadow: 0 8px 22px rgba(80,60,20,.16); display: block; }
+.gd-phones figcaption { font-size: 14px; color: var(--ink-2); margin-top: 8px; line-height: 1.5; }
+.gd-phones figcaption b { display: block; color: var(--ink); font-size: 15px; }
+
+.gd-games { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.gd-games .card { padding: 18px; position: relative; }
+.gd-games span { font-size: 34px; display: block; }
+.gd-games b { font-size: 18px; }
+.gd-games small { position: absolute; top: 16px; right: 16px; background: var(--mint-l); color: var(--mint-d); font-weight: 800; padding: 2px 10px; border-radius: 99px; }
+.gd-games p { margin: 6px 0 0; font-size: 14px; color: var(--ink-2); }
+
+.gd-faq { display: flex; flex-direction: column; gap: 10px; }
+.gd-faq details { background: #fff; border-radius: 16px; box-shadow: var(--shadow); padding: 4px 20px; border-left: 6px solid var(--pink); }
+.gd-faq summary { cursor: pointer; font-weight: 800; font-size: 17px; padding: 12px 0; list-style: none; }
+.gd-faq summary::-webkit-details-marker { display: none; }
+.gd-faq summary::before { content: "Q. "; color: var(--pink); }
+.gd-faq details[open] summary { border-bottom: 1px dashed var(--line); margin-bottom: 8px; }
+.gd-faq ol, .gd-faq ul { padding-left: 1.2em; }
+.gd-faq li { margin-bottom: 6px; }
+.gd-check { padding: 20px 24px; margin-top: 24px; border-top: 8px solid var(--mint); }
+.gd-check h3 { margin: 0 0 8px; }
+.gd-check ul { margin: 0; padding-left: 1.2em; }
+.gd-check li { margin-bottom: 6px; }
+
+.gd-foot { text-align: center; padding: 30px 18px 50px; color: var(--ink-3); }
+.gd-foot img { width: 160px; opacity: .85; }
+
+@media (max-width: 860px) {
+  .gd-cards.three, .gd-cards.two { grid-template-columns: 1fr; }
+  .gd-step { grid-template-columns: 1fr; gap: 14px; }
+  .gd-phones { grid-template-columns: repeat(2, 1fr); }
+  .gd-games { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .gd-games { grid-template-columns: 1fr; }
+}

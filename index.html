@@ -15,11 +15,13 @@
   <div class="menu">
     <a class="card" href="host.html" id="go-host"><span class="em">🎮</span><b>게임 진행하기</b><small>노트북에서 열고 큰 화면(TV·빔)에 띄우세요. 참가 QR이 나와요.</small></a>
     <a class="card" href="draw.html" id="go-draw"><span class="em">🎁</span><b>경품 추첨</b><small>명단만 넣으면 돌림판·슬롯머신·스포트라이트로 추첨해요.</small></a>
+    <a class="card guide-card" href="guide.html"><span class="em">📖</span><b>이용 가이드</b><small>진행자·참가자 사용법, 게임 규칙, 연결이 안 될 때 해결 방법을 확인하세요.</small></a>
   </div>
   <form class="join" onsubmit="event.preventDefault(); var v=this.code.value.trim().toUpperCase(); if(v.length===5){var q=new URLSearchParams(location.search); q.set('r',v); location.href='play.html?'+q.toString();}">
     <input class="field" name="code" maxlength="5" placeholder="방 코드" autocomplete="off" autocapitalize="characters">
     <button class="btn pink">참가</button>
   </form>
+  <p class="guide-links"><a href="guide.html#host">진행자 가이드</a> · <a href="guide.html#player">참가자 가이드</a> · <a href="guide.html#trouble">문제 해결</a></p>
   <footer>따뜻한 부동산 스터디 · 따부스 오락실</footer>
 </main>
 <script>

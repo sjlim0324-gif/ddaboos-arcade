@@ -1,5 +1,7 @@
 # 따부스 오락실
 
+주소: https://ddaboos2030.github.io/Arcade/ · 이용 가이드: https://ddaboos2030.github.io/Arcade/guide.html
+
 따뜻한 부동산 스터디(따부스)의 **팀 대항 미니게임 + 경품 추첨** 웹앱입니다.
 노트북 한 대와 큰 화면(TV·빔프로젝터), 참가자 스마트폰만 있으면 돼요. 설치·회원가입·서버가 필요 없고 GitHub Pages만으로 동작합니다.
 
@@ -9,6 +11,7 @@
 | `host.html` | 진행 화면. 노트북에서 열어 큰 화면에 띄우세요 |
 | `play.html` | 참가자 화면. 폰으로 QR을 찍으면 열려요 |
 | `draw.html` | 경품 추첨. 폰 없이 큰 화면만 있으면 돼요 |
+| `guide.html` | 이용 가이드 (진행자·참가자 사용법, 게임 규칙, 문제 해결) |
 
 ## GitHub Pages에 올리기
 

@@ -56,7 +56,8 @@
     app.innerHTML = '';
     const team = myTeam();
     if (name === 'connecting') {
-      app.append(h('div', { class: 'p-center' }, h('div', { class: 'spinner' }), h('p', null, '진행 화면에 연결하는 중이에요'), h('small', null, `방 코드 ${room}`)));
+      app.append(h('div', { class: 'p-center' }, h('div', { class: 'spinner' }), h('p', null, '진행 화면에 연결하는 중이에요'), h('small', null, `방 코드 ${room}`),
+        h('a', { class: 'p-guide', href: 'guide.html#trouble', target: '_blank' }, '계속 연결 중이면? 해결 방법 보기')));
       return;
     }
     if (name === 'join') return renderJoin();
@@ -130,6 +131,7 @@
       box.append(h('div', { class: 'p-new' }, inp, h('button', { class: 'btn pink', onclick: go }, '만들기')));
     } else box.append(h('p', { class: 'p-soft' }, '새 팀 만들기는 닫혀 있어요. 위에서 팀을 골라 주세요.'));
     if (!S) box.append(h('p', { class: 'p-soft' }, '진행 화면 연결을 기다리는 중…'));
+    box.append(h('a', { class: 'p-guide', href: 'guide.html#player', target: '_blank' }, '참가 방법이 궁금하면? 이용 가이드 보기'));
     app.append(box);
   }
 

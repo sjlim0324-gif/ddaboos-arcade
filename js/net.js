@@ -61,7 +61,7 @@
         (subs[t] || []).forEach(f => f(d));
       });
     });
-    report();
+    setTimeout(report, 0);
     return {
       pub(topic, obj, retain) {
         const s = JSON.stringify(obj);
