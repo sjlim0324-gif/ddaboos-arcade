@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>따부스 오락실</title>
+<link rel="icon" href="img/icon.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main class="home">
+  <img class="logo" src="img/logo-full.png" alt="따뜻한 부동산 스터디">
+  <h1>따부스 <span>오락실</span></h1>
+  <p class="sub">큰 화면 하나, 각자의 폰으로 즐기는 팀 대항 미니게임 &amp; 경품 추첨</p>
+  <div class="menu">
+    <a class="card" href="host.html" id="go-host"><span class="em">🎮</span><b>게임 진행하기</b><small>노트북에서 열고 큰 화면(TV·빔)에 띄우세요. 참가 QR이 나와요.</small></a>
+    <a class="card" href="draw.html" id="go-draw"><span class="em">🎁</span><b>경품 추첨</b><small>명단만 넣으면 돌림판·슬롯머신·스포트라이트로 추첨해요.</small></a>
+  </div>
+  <form class="join" onsubmit="event.preventDefault(); var v=this.code.value.trim().toUpperCase(); if(v.length===5){var q=new URLSearchParams(location.search); q.set('r',v); location.href='play.html?'+q.toString();}">
+    <input class="field" name="code" maxlength="5" placeholder="방 코드" autocomplete="off" autocapitalize="characters">
+    <button class="btn pink">참가</button>
+  </form>
+  <footer>따뜻한 부동산 스터디 · 따부스 오락실</footer>
+</main>
+<script>
+  // ?net=local 같은 옵션은 다음 화면으로 넘겨줌
+  if (location.search) { document.getElementById('go-host').href += location.search; document.getElementById('go-draw').href += location.search; }
+</script>
+</body>
+</html>

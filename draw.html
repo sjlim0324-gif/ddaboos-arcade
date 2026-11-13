@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>따부스 오락실 · 경품 추첨</title>
+<link rel="icon" href="img/icon.png">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/draw.css">
+</head>
+<body class="drawpage">
+<header class="d-top">
+  <a class="brandbar" href="index.html"><img src="img/logo-mark.png" alt=""><span class="title">따부스 <b>경품 추첨</b></span></a>
+  <div class="style-tabs">
+    <button data-s="wheel">🎡 돌림판</button>
+    <button data-s="slot">🎰 슬롯머신</button>
+    <button data-s="spot">🔦 스포트라이트</button>
+  </div>
+  <button class="btn sm ghost" id="fs">전체 화면</button>
+</header>
+<div class="d-main">
+  <aside class="d-side">
+    <div class="card d-box">
+      <div class="d-label"><b>참가자 명단</b><button class="linkbtn" id="fillnum">번호로 채우기</button></div>
+      <textarea id="names" class="field" rows="7" placeholder="한 줄에 한 명 (또는 쉼표로 구분)&#10;예) 김따부&#10;이스터디"></textarea>
+      <small id="ncount" class="d-small"></small>
+    </div>
+    <div class="card d-box">
+      <div class="d-label"><b>경품</b><small class="d-small">위에서부터 차례로 추첨</small></div>
+      <textarea id="prizes" class="field" rows="4" placeholder="커피 쿠폰 x5&#10;치킨 기프티콘 x2"></textarea>
+    </div>
+    <div class="card d-box">
+      <div class="d-label"><b>당첨자</b><span><button class="linkbtn" id="copy">엑셀용 복사</button> · <button class="linkbtn" id="reset">초기화</button></span></div>
+      <ol id="wins" class="wins"></ol>
+    </div>
+  </aside>
+  <section class="d-center">
+    <div id="prize-now" class="prize-now"></div>
+    <div id="dstage" class="dstage"></div>
+    <div class="d-actions">
+      <button class="btn ghost" id="redo">자리에 없음 → 다시 뽑기</button>
+      <button class="btn pink" id="drawbtn">추첨하기 <kbd>Space</kbd></button>
+    </div>
+  </section>
+</div>
+<script src="js/common.js"></script>
+<script src="js/draw.js"></script>
+</body>
+</html>

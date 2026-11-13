@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>따부스 오락실 · 진행</title>
+<link rel="icon" href="img/icon.png">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/host.css">
+</head>
+<body class="host">
+<header class="h-top">
+  <a class="brandbar" href="index.html"><img src="img/logo-mark.png" alt=""><span class="title">따부스 <b>오락실</b></span></a>
+  <div class="h-right">
+    <span class="roomcode">방 코드 <b id="code">-----</b></span>
+    <span id="status" class="status off">● 연결 중…</span>
+    <button class="btn sm ghost" id="qrbtn">QR</button>
+    <button class="btn sm ghost" id="fs">전체 화면</button>
+  </div>
+</header>
+<main id="stage" class="stage"></main>
+<footer id="foot" class="h-foot"></footer>
+<script src="vendor/qrcode.js"></script>
+<script src="vendor/mqtt.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/net.js"></script>
+<script src="js/games.js"></script>
+<script src="js/host.js"></script>
+</body>
+</html>
